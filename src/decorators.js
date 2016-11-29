@@ -9,7 +9,7 @@ const DefaultDecorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide === 0 && !this.props.wrapAround)}
-            onClick={this.handleClick}>PREV</button>
+            onClick={this.handleClick}>{this.props.prevLabel || 'PREV'}</button>
         )
       },
       handleClick(e) {
@@ -50,7 +50,7 @@ const DefaultDecorators = [
         return (
           <button
             style={this.getButtonStyles(this.props.currentSlide === cellOffsetPosition && !this.props.wrapAround)}
-            onClick={this.handleClick}>NEXT</button>
+            onClick={this.handleClick}>{this.props.nextLabel || 'NEXT'}</button>
         )
       },
       handleClick(e) {
